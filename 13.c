@@ -3,15 +3,13 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[])
-
 {
-	struct stat buf;
-	if(argc < 2)
+    struct stat buf;
+    if(argc < 2)
     {
         printf("please input filepath!\n");
         return;
     }
-
     if(stat(argv[1],&buf)<0)
     {
         printf("file not exiting.!\n");
